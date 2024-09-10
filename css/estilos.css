@@ -1,0 +1,143 @@
+/* importando os ícones para as redes sociais */
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+/* padrão do corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #4f4f4f;
+    font-size: 14px;
+    height: 98vh;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* div principal que centraliza tudo */
+#principal {
+    width: 50%; /* Mantém a largura em telas de computador */
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+}
+
+/* div com o agrupamento dos itens da biografia */
+#agrupado {
+    margin: auto;
+    background-color: none;
+}
+
+/* div da foto de perfil */
+#foto {
+    margin: 42px 0px 0px;
+    background-color: none;
+}
+
+/* elemento da imagem da foto de perfil */
+#foto img {
+    max-width: 152px;
+    border-radius: 50%;
+    border: 5px solid #f4f4f4;
+    box-shadow: 0px 0px 3px 3px rgb(0, 0, 0, .15);
+}
+
+/* div do nome */
+#nome {
+    margin: 18px 0px 0px;
+    background-color: none;
+}
+
+/* elemento do nome*/
+#nome h1 {
+    font-size: 32px;
+    font-weight: normal;
+    color: #5e7d8a;
+}
+
+/* div do cargo */
+#cargo {
+    margin: 20px 0px 0px;
+    background-color: none;
+}
+
+/* elemento que fala do cargo atual */
+#cargo h2 {
+    font-size: 20px;
+    color: black;
+    opacity: 0.6;
+}
+
+/* div da biografia */
+#biografia {
+    margin: auto;
+    background-color: none;
+}
+
+/* elemento que mostra o texto da biografia */
+#biografia p {
+    margin: 25px auto 0px;
+    max-width: 75%;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 350;
+}
+
+#biografia a {
+    text-decoration: none;
+    color: #5e7d8a;
+}
+
+/* elemento que mostra o texto da biografia porém, para smartphone */
+@media (max-width: 650px) {
+    #principal {
+        width: 85%; /* Aumenta a largura em dispositivos menores */
+    }
+
+    #biografia p {
+        margin: 25px auto;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 350;
+        text-align: justify;
+    }
+}
+
+/* div das redes sociais */
+#redes_sociais {
+    margin: 25px auto 0px;
+    background-color: none;
+}
+
+/* elementos das redes sociais que são os ícones para ir aos aplicativos */
+#redes_sociais a {
+    color: #4f4f4f;
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 20px;
+    opacity: 0.6;
+}
+
+/* efeito ao passar em cima com o mouse */
+#redes_sociais a:hover {
+    cursor: pointer;
+    color: #5e7d8a;
+    transition: color 300ms;
+}
+
+/* div do rodapé */
+#rodape {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 100;
+    opacity: 0.8;
+}
+
+/* classe para centralizar os conteúdos das divs */
+.centralizado {
+    text-align: center;
+}

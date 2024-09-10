@@ -1,14 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Portfólio do Murilo</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="shortcut icon" href="img/favicon_02.ico" type="image/x-icon">
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+        .cartao {
+            width: 423px;
+            background-color: #F4F4F4;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .cartao img {
+            width: 100%;
+            height: auto;
+        }
+        .cartao-conteudo {
+            padding: 16px;
+        }
+        .cartao-conteudo a {
+            text-decoration: none;
+            color: #5e7d8a;
+        }
+        .cartao-conteudo h2 {
+            font-size: 20px;
+            color: black;
+            opacity: 0.6;
+        }
+        .cartao-conteudo p {
+            margin: 23px auto 0px;
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 350;
+        }
+        .cartao-conteudo .botao {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #D9D9D9;
+            /* opacity: 0.6; */
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 16px;
+            color: black;
+        }
+        
+    </style>
 </head>
 
-<body>
-    OK
+<body> 
+
+     <!-- div central -->
+     <div class="centralizado">
+        
+        <!-- div para mostrar o nome -->
+        <div id="nome">
+            <h1>Meu portfólio</h1>
+        </div>
+
+    </div>
+
+    <div class='container'>
+
+        <div class='cartao'>
+            <img id="imagem-projeto" src="imagens/dash01/dark1.png">
+            <div class="cartao-conteudo">
+                <h2>
+                    Dashboard de <a href="https://app.powerbi.com/links/XLVuJ4e_wU?ctid=ee891e5a-a2c7-4306-92e8-44a920c741b2&pbi_source=linkShare" target="_blank" id="trocar-imagem">Financeiro</a>
+                </h2>
+                <p>
+                    Objetivos principais e indicadores:
+                </p>
+                <p style="text-align: justify;">
+                    Acompanhar receita, custo e margem ao longo do tempo, analisando por ano e mês, linha de produto, vendedor, supervisor, além de identificar os produtos de melhor desempenho.
+                </p>
+                <a href="https://app.powerbi.com/links/XLVuJ4e_wU?ctid=ee891e5a-a2c7-4306-92e8-44a920c741b2&pbi_source=linkShare" class="botao" target="_blank">Acessar Dashboard</a>
+                <!-- <button id="trocar-imagem" class="botao">Trocar Imagem</button> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- div central -->
+    <div class="centralizado">
+        
+        <div id="rodape">
+            <p>Licença MIT - Copyright © 2020 Murilo Chaves Jayme</p>
+        </div>
+
+    </div>
+
+    <script>
+        const imagens = [
+            "imagens/dash01/dark1.png",
+            "imagens/dash01/dark2.png",
+            "imagens/dash01/dark3.png",
+            "imagens/dash01/light1.png",
+            "imagens/dash01/light2.png",
+            "imagens/dash01/light3.png",
+        ];
+        let indiceAtual = 0;
+
+        document.getElementById('trocar-imagem').addEventListener('click', () => {
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            document.getElementById('imagem-projeto').src = imagens[indiceAtual];
+        });
+
+        setInterval(() => {
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            document.getElementById('imagem-projeto').src = imagens[indiceAtual];
+        }, 2000);
+    </script>
+
 </body>
 
 </html>
